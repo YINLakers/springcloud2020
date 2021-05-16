@@ -8,3 +8,7 @@ eureka:
 
 spring:
   name: xiaomi
+
+
+config:
+  info:main config-dev.yml
