@@ -1,7 +1,10 @@
-test git springcloudconfig  version 1.0
-name: yinqianguang-dev
+
 #服务注册到eureka地址
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka
+
+
+spring:
+  name: xiaomi
