@@ -104,6 +104,11 @@
                 <version>${lombok.version}</version>
                 <optional>true</optional>
             </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.76</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <build>
