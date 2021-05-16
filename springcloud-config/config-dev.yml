@@ -11,4 +11,4 @@ spring:
 
 
 config:
-  info:main config-dev.yml
+  info: main config-dev.yml
