@@ -20,6 +20,8 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     public Payment getPaymentById(Long id){
+        System.out.println("查询-----------id："+id);
+
        return paymentDao.getPaymentById(id);
     }
 }
