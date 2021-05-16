@@ -1,12 +1,17 @@
 package com.atguigu.springcloud.service.impl;
 
-import cn.hutool.core.util.IdUtil;
 import com.atguigu.springcloud.service.IMessageService;
+import com.sun.javafx.scene.control.skin.DatePickerSkin;
+import org.apache.commons.codec.digest.Md5Crypt;
+import org.apache.commons.lang.time.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.messaging.Source;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.support.MessageBuilder;
+import org.springframework.util.ObjectUtils;
+
+import java.util.UUID;
 
 /**
  * Created by chenpeng on 2020/11/6 17:16
@@ -19,9 +24,9 @@ public class MessageServiceImpl implements IMessageService {
 
     @Override
     public String send() {
-        String serial = IdUtil.simpleUUID();
+        String serial = UUID.randomUUID().toString();
         output.send(MessageBuilder.withPayload(serial).build());
-        System.out.println("***********serial:"+serial);
+        System.out.println("***********serial:" + serial);
         return serial;
     }
 }
